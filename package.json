@@ -7,6 +7,11 @@
     "dist",
     "src"
   ],
+  "repository":{
+    "url":"https://github.com/gdariodh/gd-product-card",
+    "type": "git"
+  },
+  "homepage": "https://gdariodh.netlify.app/",
   "engines": {
     "node": ">=10"
   },
@@ -62,5 +67,12 @@
   },
   "dependencies": {
     "build": "^0.1.4"
-  }
+  },
+  "keywords": [
+    "product",
+    "card",
+    "gabriel",
+    "diaz", 
+    "gdariodh"
+  ]
 }
