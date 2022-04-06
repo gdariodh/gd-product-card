@@ -7,8 +7,8 @@
     "dist",
     "src"
   ],
-  "repository":{
-    "url":"https://github.com/gdariodh/gd-product-card",
+  "repository": {
+    "url": "https://github.com/gdariodh/gd-product-card",
     "type": "git"
   },
   "homepage": "https://gdariodh.netlify.app/",
@@ -19,6 +19,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -52,13 +53,19 @@
     }
   ],
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@rollup/plugin-image": "^2.1.1",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "babel-jest": "^27.5.1",
     "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-test-renderer": "^18.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
@@ -66,13 +73,20 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@types/react-test-renderer": "^17.0.1",
     "build": "^0.1.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   },
   "keywords": [
     "product",
     "card",
     "gabriel",
-    "diaz", 
+    "diaz",
     "gdariodh"
   ]
 }
